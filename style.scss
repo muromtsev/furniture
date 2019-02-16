@@ -1,0 +1,209 @@
+@import "_reset";
+$Jura: 'Jura', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+body {
+    background:
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300;
+    background-size: 100px 100px;
+}
+
+// HEADER
+
+.header {
+    
+    &-top {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1920px;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        background-color: rgba(#000, .3);
+        
+
+        &__logo {
+            color: #fff;
+            font-size: 2em;
+            font-family: $Jura;
+        }
+    
+        &__menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+    
+            li {
+                padding: 5px;
+    
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: $Jura;
+                }
+            }
+        }
+    }
+    &-title {
+        width: 100%;
+        min-height: 300px;
+        font-family: $Jura;
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #fff;
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+        h2 {
+            @extend h1;
+            font-size: 2.5em;
+        }
+        &__contacts {
+            padding-top: 60px;
+            padding-bottom: 30px;
+            text-align: center;
+            color: #fff;
+            span {
+                font-size: 1.5em;
+                letter-spacing: 5px;
+            }
+        }
+    }
+}
+.wrapper {
+  max-width: 1700px;
+  width: 100%;
+  margin: auto;
+
+  .section {
+    width: 100%;
+    font-family: $Roboto;
+    &-title {
+        font-size: 2em;
+        color: #fff;
+        line-height: 2em;
+    }
+    &-flex {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1680px;
+      width: 100%;
+
+      figure.effect {
+        font-family: $Roboto;
+        position: relative;
+        overflow: hidden;
+        max-width: 400px;
+        max-height: 300px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        margin: 10px;
+      }
+        
+      figure.effect * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+        
+      figure.effect img {
+        width: 100%;
+        position: relative;
+        opacity: 0.4;
+        overflow: hidden;
+      }
+        
+      figure.effect figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+        
+      figure.effect h2 {
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        display: inline-block;
+        background: #000000;
+        -webkit-transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+        transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+        padding: 12px 5px;
+        margin: 0;
+        top: 50%;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+        
+      figure.effect h2 span {
+        font-weight: 800;
+      }
+        
+      figure.effect:before {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+        background: rgb(211, 25, 25);
+        position: absolute;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transform: rotate(110deg) translateY(-50%);
+        transform: rotate(110deg) translateY(-50%);
+      }
+      
+      figure.effect a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+      }                
+      figure.effect.red {
+        background: #581a14;
+      }
+      
+      figure.effect.red h2 {
+        background: #c52115;
+      }
+      
+      figure.effect:hover img,
+      figure.effect.hover img {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      
+      figure.effect:hover h2,
+      figure.effect.hover h2 {
+        -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+        transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+      }
+      
+      figure.effect:hover:before,
+      figure.effect.hover:before {
+        -webkit-transform: rotate(110deg) translateY(-150%);
+        transform: rotate(110deg) translateY(-150%);
+      }
+    }
+  }
+}
