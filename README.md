@@ -1,3 +1,3 @@
 # furniture
 Furniture manufacturing
-https://github.com/muromtsev/furniture/
+[demo](https://muromtsev.github.io/furniture/)
