@@ -1,6 +1,11 @@
 @import "_reset";
+@import "_accord";
+
 $Jura: 'Jura', sans-serif;
 $Roboto: 'Roboto', sans-serif;
+$c1: #0E6B77;
+$c2: #172A3A;
+
 body {
     background:
     radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
@@ -24,6 +29,7 @@ body {
     &-top {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         max-width: 1920px;
         width: 100%;
         height: 100px;
@@ -207,3 +213,44 @@ body {
     }
   }
 }
+
+// ACCORD
+
+.section {
+  max-width: 1920px;
+  width: 100%;
+  h1 {
+    font-size: 3em;
+    font-family: $Jura;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .section-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+    &__item {
+      max-width: 900px;
+      width: 50%;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    .slider {
+      margin: 5px;
+      background-color: rgba($c1, .5);
+    }
+    .title-item {
+      color: #fff;
+      font-size: 1.3em;
+      font-family: $Jura;
+      background-color: rgba($c2, .5);
+    }
+  }
+}
+

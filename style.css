@@ -69,6 +69,8 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1920px;
   width: 100%;
   height: 100px;
@@ -269,5 +271,51 @@ body {
 .wrapper .section-flex figure.effect.hover:before {
   -webkit-transform: rotate(110deg) translateY(-150%);
   transform: rotate(110deg) translateY(-150%);
+}
+
+.section {
+  max-width: 1920px;
+  width: 100%;
+}
+
+.section h1, .section .header-title h2, .header-title .section h2 {
+  font-size: 3em;
+  font-family: "Jura", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section .section-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section .section-flex__item {
+  max-width: 900px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.section .section-flex .slider {
+  margin: 5px;
+  background-color: rgba(14, 107, 119, 0.5);
+}
+
+.section .section-flex .title-item {
+  color: #fff;
+  font-size: 1.3em;
+  font-family: "Jura", sans-serif;
+  background-color: rgba(23, 42, 58, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
