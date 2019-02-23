@@ -1,0 +1,40 @@
+@import "_var";
+
+.header {
+    
+    &-top {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1920px;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        background-color: rgba(#000, .3);
+        
+
+        &__logo {
+            color: #fff;
+            font-size: 2em;
+            font-family: $Jura;
+        }
+    
+        &__menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+    
+            li {
+                padding: 5px;
+    
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: $Jura;
+                }
+            }
+        }
+    }
+    
+}

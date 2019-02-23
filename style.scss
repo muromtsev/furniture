@@ -1,12 +1,14 @@
-@import "_reset";
-@import "_accord";
+@import "sass/_var";
+@import "sass/_reset";
+@import "sass/_header";
+@import "sass/_footer";
 
-$Jura: 'Jura', sans-serif;
-$Roboto: 'Roboto', sans-serif;
-$c1: #0E6B77;
-$c2: #172A3A;
+// VARIABLES
+
 
 body {
+  width: 100%;
+  height: 100%;
     background:
     radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
     radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
@@ -21,77 +23,165 @@ body {
     background-color: #300;
     background-size: 100px 100px;
 }
-
-// HEADER
-
-.header {
+a {text-decoration: none;}
+// PRICE LIST
+.price {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 300px;
+  max-width: 450px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-family: $Roboto;
+  color: #fff;  
+  margin: 10px;
+  background-color: #fff;
+  &-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    left: auto;
+    display: block;
+    background-color: darken(red, 15%);
+    width: 40px;
+    height: 40px;
+    border: 2px double rgba(#fff, .5);
+    border-radius: 50%;
+    cursor: pointer;
     
-    &-top {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        max-width: 1920px;
-        width: 100%;
-        height: 100px;
-        align-items: center;
-        background-color: rgba(#000, .3);
+    }
+
+    .inner {
+      position: absolute;
+      top: 17px;
+      left: 5px;
+      width: 30px;
+      height: 5px;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      background-color: #fff;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg);
+        width: 30px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 2px;
+      }
+    
+  }
+  &-list {
+    // border: 1px solid #fff;
+    
+    table {
+      background-color: rgba(104, 6, 6, .9);
+      width: 100%;
+      font-size: 1.5em;
+      border-collapse: collapse;
+      color: #fff;      
+      th, tr, td {
+        padding: 5px;
+        border: 4px double rgba(#fff, .2);
+      }
+      th {
+        font-weight: normal;
         
+        
+      }
+      tr {        
+        
+        transition: .2s linear;
+        &:nth-child(even):not(:first-child) {
+          background-color: rgba(orange, .2);
+        }
+        &:not(:first-child) {
+          &:hover {
+            background-color: rgba(#fff, .3);
+          }
+        }
+      }
+      td {
+        cursor: pointer;
+        &:first-child {
+          padding-left: 50px;
+        }
+        &:not(:first-child) {
+          text-align: center;
+        }
+        
+      }
 
-        &__logo {
-            color: #fff;
-            font-size: 2em;
-            font-family: $Jura;
-        }
-    
-        &__menu {
-            display: flex;
-            list-style: none;
-            justify-content: center;
-    
-            li {
-                padding: 5px;
-    
-                a {
-                    display: block;
-                    text-decoration: none;
-                    color: #fff;
-                    font-family: $Jura;
-                }
-            }
-        }
     }
-    &-title {
-        width: 100%;
-        min-height: 300px;
-        font-family: $Jura;
-        h1 {
-            font-size: 3em;
-            text-align: center;
-            color: #fff;
-            padding-top: 60px;
-            padding-bottom: 20px;
-        }
-        h2 {
-            @extend h1;
-            font-size: 2.5em;
-        }
-        &__contacts {
-            padding-top: 60px;
-            padding-bottom: 30px;
-            text-align: center;
-            color: #fff;
-            span {
-                font-size: 1.5em;
-                letter-spacing: 5px;
-            }
-        }
-    }
+  }
 }
+.price-show {
+  display: block;
+}
+.price-hide {
+  display: none;
+}
+
 .wrapper {
   max-width: 1700px;
   width: 100%;
   margin: auto;
+  
+  .page {
+    margin-top: 90px;
+    width: 100%;
+    font-family: $Jura;
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        color: #fff;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+    h2 {
+        @extend h1;
+        font-size: 2.5em;
+    }
+    &-btn {
+      width: 250px;
+      height: 50px;
+      margin-top: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+      color: #fff;
+      font-size: 1.5em;
+      line-height: 1.8;
+      text-align: center;
+      border: 2px solid tan;
+      border-radius: 10px;
+      background-color: rgba(#fff, .1);
+      transition: .3s ease;
+      cursor: pointer;
+      
+      &:hover {
+        border-style: dashed;
+        background-color: transparent;
 
+      }
+    }
+    &-contacts {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        text-align: center;
+        color: tan;
+        span {
+            font-size: 1.5em;
+            line-height: 1.8;
+            letter-spacing: 5px;
+        }
+    }
+  
+  }
   .section {
     width: 100%;
     font-family: $Roboto;
@@ -159,6 +249,7 @@ body {
       }
         
       figure.effect h2 span {
+        font-size: 1.5em;
         font-weight: 800;
       }
         
