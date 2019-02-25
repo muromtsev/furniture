@@ -2,6 +2,7 @@
 [demo](https://muromtsev.github.io/furniture/)
 
 ## Мягкая мебель
+  ### Диваны
   * Аккорд
   * Ампир
   * Ампир-2
