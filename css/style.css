@@ -106,15 +106,6 @@ table {
   width: 100%;
 }
 
-.section h1, .section .wrapper .page h2, .wrapper .page .section h2 {
-  font-size: 6vw;
-  font-family: "Jura", sans-serif;
-  text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-}
-
 .section .section-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,16 +129,45 @@ table {
   width: 100%;
 }
 
-.section .section-flex .item-descr {
+.section .section-flex .item {
   max-width: 800px;
   color: #fff;
   font-size: 1.3em;
   font-family: "Jura", sans-serif;
 }
 
-.section .section-flex .item-descr__price {
+.section .section-flex .item h1, .section .section-flex .item .wrapper .page h2, .wrapper .page .section .section-flex .item h2 {
+  font-size: 6vw;
+  font-family: "Jura", sans-serif;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+.section .section-flex .item-info {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section .section-flex .item-info__descr {
+  font-size: 0.8em;
+  line-height: 1.3em;
+  width: 70%;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.section .section-flex .item-info h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.section .section-flex .item-info__model-descr {
+  font-size: 0.8em;
+  line-height: 1.2em;
 }
 
 .footer {

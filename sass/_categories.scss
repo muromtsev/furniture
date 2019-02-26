@@ -5,14 +5,7 @@
     max-width: 1920px;
     width: 100%;
     
-    h1 {
-        font-size: 6vw;
-        font-family: $Jura;
-        text-transform: uppercase;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: #fff;
-    }
+    
     .section-flex {
         display: flex;
         justify-content: space-around;
@@ -29,14 +22,42 @@
             max-width: 900px;
             width: 100%;
         }
-        .item-descr {
+        .item {
             max-width: 800px;
             color: #fff;
             font-size: 1.3em;
             font-family: $Jura;
-            &__price {
-                margin-top: 20px;
-                margin-bottom: 20px;
+            h1 {
+                font-size: 6vw;
+                font-family: $Jura;
+                text-transform: uppercase;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                color: #fff;
+            }            
+            &-info {
+                padding-left: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: rgba(#000, .5);
+                &__price {
+                    
+                }
+                &__descr {
+                    font-size: 0.8em;
+                    line-height: 1.3em;
+                    width: 70%;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                &__model-descr {
+                    font-size: 0.8em;
+                    line-height: 1.2em;
+                }
             }
         }
     }
