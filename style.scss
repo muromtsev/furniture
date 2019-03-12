@@ -1,11 +1,9 @@
 @import "sass/_var";
 @import "sass/_reset";
 @import "sass/_header";
+@import "sass/_arrows";
 @import "sass/_categories";
 @import "sass/_footer";
-
-// VARIABLES
-
 
 body {
   width: 100%;
@@ -24,108 +22,6 @@ body {
     background-color: #300;
     background-size: 100px 100px;
 }
-a {text-decoration: none;}
-// PRICE LIST
-.price {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 300px;
-  max-width: 450px;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  font-family: $Roboto;
-  color: #fff;  
-  margin: 10px;
-  background-color: #fff;
-  &-btn {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    left: auto;
-    display: block;
-    background-color: darken(red, 15%);
-    width: 40px;
-    height: 40px;
-    border: 2px double rgba(#fff, .5);
-    border-radius: 50%;
-    cursor: pointer;
-    
-    }
-
-    .inner {
-      position: absolute;
-      top: 17px;
-      left: 5px;
-      width: 30px;
-      height: 5px;
-      border-radius: 2px;
-      transform: rotate(45deg);
-      background-color: #fff;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotate(-90deg);
-        width: 30px;
-        height: 5px;
-        background-color: #fff;
-        border-radius: 2px;
-      }
-    
-  }
-  &-list {
-    // border: 1px solid #fff;
-    
-    table {
-      background-color: rgba(104, 6, 6, .9);
-      width: 100%;
-      font-size: 1.5em;
-      border-collapse: collapse;
-      color: #fff;      
-      th, tr, td {
-        padding: 5px;
-        border: 4px double rgba(#fff, .2);
-      }
-      th {
-        font-weight: normal;
-        
-        
-      }
-      tr {        
-        
-        transition: .2s linear;
-        &:nth-child(even):not(:first-child) {
-          background-color: rgba(orange, .2);
-        }
-        &:not(:first-child) {
-          &:hover {
-            background-color: rgba(#fff, .3);
-          }
-        }
-      }
-      td {
-        cursor: pointer;
-        &:first-child {
-          padding-left: 50px;
-        }
-        &:not(:first-child) {
-          text-align: center;
-        }
-        
-      }
-
-    }
-  }
-}
-.price-show {
-  display: block;
-}
-.price-hide {
-  display: none;
-}
 
 .wrapper {
   max-width: 1700px;
@@ -140,38 +36,16 @@ a {text-decoration: none;}
         font-size: 3em;
         text-align: center;
         color: #fff;
-        padding-top: 60px;
+        padding-top: 50px;
         padding-bottom: 20px;
     }
     h2 {
         @extend h1;
         font-size: 2.5em;
     }
-    &-btn {
-      width: 250px;
-      height: 50px;
-      margin-top: 150px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 100px;
-      color: #fff;
-      font-size: 1.5em;
-      line-height: 1.8;
-      text-align: center;
-      border: 2px solid tan;
-      border-radius: 10px;
-      background-color: rgba(#fff, .1);
-      transition: .3s ease;
-      cursor: pointer;
-      
-      &:hover {
-        border-style: dashed;
-        background-color: transparent;
-
-      }
-    }
+    
     &-contacts {
-        padding-top: 100px;
+        padding-top: 350px;
         padding-bottom: 80px;
         text-align: center;
         color: tan;
@@ -187,9 +61,14 @@ a {text-decoration: none;}
     width: 100%;
     font-family: $Roboto;
     &-title {
-        font-size: 2em;
-        color: #fff;
-        line-height: 2em;
+      font-size: 5vw;
+      color: tan;
+      line-height: 2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 150px;
+      padding-bottom: 50px;
     }
     &-flex {
       display: flex;
