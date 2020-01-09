@@ -1,5 +1,5 @@
 # Furniture manufacturing
-[demo](https://muromtsev.github.io/furniture/)
+[Live](https://muromtsev.github.io/furniture/)
 
 ## Мягкая мебель
   ### Диваны
