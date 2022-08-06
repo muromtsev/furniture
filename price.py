@@ -46,6 +46,15 @@ def get_items_url():
         print(f"[INFO] Complete {i} page..")
         with open(f'price.json', 'a') as file:
             json.dump(dict_data, file, indent=4, ensure_ascii=False)
-
         
-get_items_url()
+# get_items_url()
+
+def work_per_unit():
+
+    with open('price.json') as file:
+        items = json.load(file)
+
+
+    for item in items:
+        print(item["name"])
+    
