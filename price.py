@@ -54,7 +54,18 @@ def work_per_unit():
     with open('price.json') as file:
         items = json.load(file)
 
-
     for item in items:
         print(item["name"])
+
+def create_list_items():
+    with open('price.json') as f:
+        items = json.load(f)
+    
+    for idx, item in enumerate(items):
+        name = item['name']
+        idx += 1
+        with open('price.txt', 'a') as file:
+            file.write(f"{idx}.{name} \n")
+        
+# create_list_items()
     
