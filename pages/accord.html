@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Furniture manufacturing</title>
+    <title>Furniture manufacturing</title>    
+    <!-- lightGallery -->
+    <link rel="stylesheet" href="../dist/css/lightgallery.css">
+    <link rel="stylesheet" href="../dist/css/lg-zoom.css">
+    <link rel="stylesheet" href="../dist/css/lg-thumbnail.css">
     <!-- styles -->
-    <link rel="stylesheet" href="../dist/css/style.min.css">
-    <!-- slider -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/unitegallery.min.js"></script>
-    <link rel="stylesheet" href="../css/unite-gallery.css">    
-    <script src="../js/ug-theme-grid.js"></script>    
+    <link rel="stylesheet" href="../dist/css/style.min.css">   
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Jura:300,400,500,700|Roboto:300,400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
@@ -22,83 +21,20 @@
     <section class="section">
         <div class="section__title">
             <span class="section__description">диван</span>
-            <h1>Аккорд</h1>
+            <h1>Ампир</h1>
         </div>
         <div class="section-flex">
-            <div class="section-flex__item slider">
-                <div id="gallery" style="margin:0px auto;display:none;">		
-                    <img alt="Аккорд 140"
-                    src="../images/accord/accord-1-100.png"
-                    data-image="images/accord/accord-1.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 140"
-                    src="../images/accord/accord-2-100.png"
-                    data-image="images/accord/accord-2.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 140"
-                    src="../images/accord/accord-3-100.png"
-                    data-image="images/accord/accord-3.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-4-100.png"
-                    data-image="images/accord/accord-4.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-5-100.png"
-                    data-image="images/accord/accord-5.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-6-100.png"
-                    data-image="images/accord/accord-6.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-7-100.png"
-                    data-image="images/accord/accord-7.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-8-100.png"
-                    data-image="images/accord/accord-8.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-9-100.png"
-                    data-image="images/accord/accord-9.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 180"
-                    src="../images/accord/accord-10-100.png"
-                    data-image="images/accord/accord-10.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 80"
-                    src="../images/accord/accord-11-100.png"
-                    data-image="images/accord/accord-11.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 80"
-                    src="../images/accord/accord-12-100.png"
-                    data-image="images/accord/accord-12.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 140"
-                    src="../images/accord/accord-13-100.png"
-                    data-image="images/accord/accord-13.jpg"
-                    data-description=""
-                    >		
-                    <img alt="Аккорд 140"
-                    src="../images/accord/accord-14-100.png"
-                    data-image="images/accord/accord-14.jpg"
-                    data-description=""
-                    >
-                    
-                        
+            <div class="section-flex__item item">
+                <div id="static-thumbnails">
+                    <a href="images/ampir/amp1.png">
+                        <img src="images/ampir/mini_amp1.png" />
+                    </a>
+                    <a href="images/ampir/amp2.png">
+                        <img src="images/ampir/mini_amp2.png" />
+                    </a>
+                    <a href="images/ampir/amp3.png">
+                        <img src="images/ampir/mini_amp3.png" />
+                    </a>
                 </div>
             </div>
             <div class="section-flex__item item">
@@ -119,18 +55,18 @@
     </section>
     
     
-    <!-- SLIDER JQUERY -->
-    <script type="text/javascript">
-	
-        jQuery(document).ready(function(){
-
-            jQuery("#gallery").unitegallery({
-                gallery_theme: "grid",
-                theme_panel_position: "right"
-            });
-
+     <!-- JS lightGallery -->
+     <script src="../dist/lightgallery.min.js"></script>
+     <script src="../dist/lg-thumbnail.min.js"></script>
+     <script src="../dist/lg-zoom.min.js"></script>
+     <script>
+        lightGallery(document.getElementById('static-thumbnails'), {
+            animateThumb: false,
+            zoomFromOrigin: false,
+            allowMediaOverlap: true,
+            toggleThumb: true,
         });
-        
-    </script>
+
+     </script>
 </body>
 </html>
