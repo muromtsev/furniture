@@ -1,4 +1,4 @@
-lightGallery(document.getElementById('animated-thumbnails'), {
-    plugins: [lgZoom, lgThumbnail],
-    thumbnail: true,
-});
+// lightGallery(document.getElementById('animated-thumbnails'), {
+//     plugins: [lgZoom, lgThumbnail],
+//     thumbnail: true,
+// });

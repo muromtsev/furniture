@@ -1,8 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
 html, body, div, span, applet, object, iframe,
-h1,
-.wrapper .page h2, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -65,33 +64,45 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1920px;
   width: 100%;
   height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-left: 20px;
 }
 .header-top__logo {
+  max-width: 300px;
+  width: 100%;
+}
+.header-top__logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #fff;
-  font-size: 2em;
   font-family: "Jura", sans-serif;
+  font-size: 2em;
+}
+.header-top nav {
+  max-width: 300px;
+  width: 100%;
 }
 .header-top__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-size: 1.4em;
 }
 .header-top__menu li {
   padding: 5px;
@@ -102,20 +113,101 @@ a {
   color: #fff;
   font-family: "Jura", sans-serif;
 }
+.header-top__contacts {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 
-.section {
+@media screen and (max-width: 860px) {
+  .header-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .header-top__logo {
+    padding: 10px 0;
+  }
+  .header-top nav {
+    padding: 10px 0;
+  }
+  .header-top__contacts {
+    padding: 10px 0;
+  }
+}
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 1920px;
   width: 100%;
-}
-.section__title h1, .section__title .wrapper .page h2, .wrapper .page .section__title h2 {
-  font-size: 6vw;
-  font-family: "Jura", sans-serif;
-  text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
-.section .section-flex {
+.page .page-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.3em;
+  font-family: "Jura", sans-serif;
+}
+.page .page-flex__item {
+  padding: 20px 0;
+}
+.page .page-flex .slider {
+  max-width: 900px;
+  width: 100%;
+}
+.page .page-flex .item {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.page .page-flex .item-title__name {
+  padding: 5px 0;
+  font-size: 2.5em;
+}
+.page .page-flex .item-title__price {
+  padding: 10px 0;
+  color: rgb(255, 255, 0);
+}
+.page .page-flex .item ul {
+  font-size: 1em;
+  list-style-type: square;
+}
+.page .page-flex .slider {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-top: 2px dashed #fff;
+}
+
+.footer {
+  max-width: 1920px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,70 +215,6 @@ a {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-.section .section-flex__item {
-  width: 100%;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-.section .section-flex .slider {
-  max-width: 900px;
-  width: 100%;
-}
-.section .section-flex .item {
-  max-width: 800px;
-  color: #fff;
-  font-size: 1.3em;
-  font-family: "Jura", sans-serif;
-}
-.section .section-flex .item-info {
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.section .section-flex .item-info__descr {
-  font-size: 0.8em;
-  line-height: 1.3em;
-  width: 70%;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.section .section-flex .item-info h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.section .section-flex .item-info__model-descr {
-  font-size: 0.8em;
-  line-height: 1.2em;
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 1920px;
-  width: 100%;
-  height: auto;
-  margin-top: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.footer__copy {
-  margin: auto;
-}
-.footer__copy span {
   text-align: center;
   font-family: "Jura", sans-serif;
   font-size: 1em;
@@ -202,41 +230,15 @@ body {
 }
 
 .wrapper {
-  max-width: 1700px;
+  max-width: 1920px;
   width: 100%;
-  margin: auto;
 }
-.wrapper .page {
-  margin-top: 90px;
-  width: 100%;
-  font-family: "Jura", sans-serif;
-}
-.wrapper .page h1, .wrapper .page h2 {
-  font-size: 3em;
-  text-align: center;
-  color: #fff;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-.wrapper .page h2 {
-  font-size: 2.5em;
-}
-.wrapper .page-contacts {
-  padding-top: 350px;
-  padding-bottom: 80px;
-  text-align: center;
-  color: tan;
-}
-.wrapper .page-contacts span {
-  font-size: 1.5em;
-  line-height: 1.8;
-  letter-spacing: 5px;
-}
-.wrapper .section {
+
+.section {
   width: 100%;
   font-family: "Roboto", sans-serif;
 }
-.wrapper .section-title {
+.section-title {
   font-size: 5vw;
   color: tan;
   line-height: 2em;
@@ -246,7 +248,7 @@ body {
   padding-top: 150px;
   padding-bottom: 50px;
 }
-.wrapper .section-flex {
+.section-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,10 +257,9 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1680px;
-  width: 100%;
+  margin: 0 auto;
 }
-.wrapper .section-flex figure.effect {
+.section-flex figure.effect {
   font-family: "Roboto", sans-serif;
   position: relative;
   overflow: hidden;
@@ -272,26 +273,26 @@ body {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   margin: 10px;
 }
-.wrapper .section-flex figure.effect * {
+.section-flex figure.effect * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.wrapper .section-flex figure.effect img {
+.section-flex figure.effect img {
   width: 100%;
   position: relative;
   opacity: 0.4;
   overflow: hidden;
 }
-.wrapper .section-flex figure.effect figcaption {
+.section-flex figure.effect figcaption {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 }
-.wrapper .section-flex figure.effect h2 {
+.section-flex figure.effect h2 {
   position: absolute;
   left: 40px;
   right: 40px;
@@ -305,11 +306,11 @@ body {
   text-transform: uppercase;
   font-weight: 400;
 }
-.wrapper .section-flex figure.effect h2 span {
+.section-flex figure.effect h2 span {
   font-size: 1.5em;
   font-weight: 800;
 }
-.wrapper .section-flex figure.effect:before {
+.section-flex figure.effect:before {
   height: 100%;
   width: 100%;
   top: 0;
@@ -322,7 +323,7 @@ body {
   -webkit-transform: rotate(110deg) translateY(-50%);
   transform: rotate(110deg) translateY(-50%);
 }
-.wrapper .section-flex figure.effect a {
+.section-flex figure.effect a {
   left: 0;
   right: 0;
   top: 0;
@@ -330,25 +331,25 @@ body {
   position: absolute;
   z-index: 1;
 }
-.wrapper .section-flex figure.effect.red {
+.section-flex figure.effect.red {
   background: #581a14;
 }
-.wrapper .section-flex figure.effect.red h2 {
+.section-flex figure.effect.red h2 {
   background: #c52115;
 }
-.wrapper .section-flex figure.effect:hover img,
-.wrapper .section-flex figure.effect.hover img {
+.section-flex figure.effect:hover img,
+.section-flex figure.effect.hover img {
   opacity: 1;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.wrapper .section-flex figure.effect:hover h2,
-.wrapper .section-flex figure.effect.hover h2 {
+.section-flex figure.effect:hover h2,
+.section-flex figure.effect.hover h2 {
   -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
   transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
 }
-.wrapper .section-flex figure.effect:hover:before,
-.wrapper .section-flex figure.effect.hover:before {
+.section-flex figure.effect:hover:before,
+.section-flex figure.effect.hover:before {
   -webkit-transform: rotate(110deg) translateY(-150%);
   transform: rotate(110deg) translateY(-150%);
 }/*# sourceMappingURL=style.css.map */

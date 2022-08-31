@@ -1,24 +1,18 @@
 @import "_var";
-.footer {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+
+.footer { 
     max-width: 1920px;
     width: 100%;
-    height: auto;
-    margin-top: 50px;
     padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: center;
-    background-color: rgba(#000, .6);
+    padding-bottom: 20px;        
 
-    &__copy {
-        margin: auto;
-        span {
-            text-align: center;
-            font-family: $Jura;
-            font-size: 1em;
-            color: #fff;
-        }
-    }
+    &-flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;        
+        text-align: center;
+        font-family: $Jura;
+        font-size: 1em;
+        color: #fff;
+    }    
 }

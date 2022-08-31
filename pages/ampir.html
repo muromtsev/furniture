@@ -16,15 +16,39 @@
 </head>
 <body>
     <!-- HEADER -->
-    <!-- /// -->
-    <!-- HEADER END -->
-    <section class="section">
-        <div class="section__title">
-            <span class="section__description">диван</span>
-            <h1>Ампир</h1>
+    <header class="header"> 
+        <div class="header-top">
+            <div class="header-top__logo">
+                <a href="index.html">
+                    <img src="/images/convenient.png" alt="convenient">
+                    <span>
+                        Furniture <br> manufacturing
+                    </span>
+                </a>
+            </div>
+            <nav>
+                <ul class="header-top__menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Цены</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-top__contacts">
+                <a href="https://vk.com/ipozvezd"><img src="/images/vk.png" alt="vkontakte"></a>
+                <a href="https://instagram.com/ipozvezd"><img src="/images/instagram.png" alt="instagram"></a>
+            </div>
         </div>
-        <div class="section-flex">
-            <div class="section-flex__item item">
+    </header>
+    <!-- HEADER END -->
+    <section class="page">
+        <div class="page-flex">
+            <div class="page-flex__item item">
+                <div class="item-title">                        
+                    <h2 class="item-title__name">Ампир</h2>
+                    <p class="item-title__price">Цена от <span class="price">27450</span></p>
+                </div>
+            </div>
+            <div class="page-flex__item slider">
                 <div id="static-thumbnails">
                     <a href="images/ampir/amp1.png">
                         <img src="images/ampir/mini_amp1.png" />
@@ -38,21 +62,25 @@
                 </div>
             </div>
             <div class="section-flex__item item">
-                <div class="item-info">
-                    <p class="item-info__price">Цена от <span>20950</span></p>
-                    <p class="item-info__descr">Данная модель относится к "Чехловой" мягкой мебели. Возможны исполнения шириной 80 см, 120 см, 140 см и 190 см. Хорошо подходит для интерьеров детских комнат и гостинных.</p>
-                    <h2>Особенности модели</h2>
-                    <p class="item-info__model-descr">
-                        - съëмный чехол, допустима стирка; <br>
-                        - ортопедическое основание из гнуто-клееных деталей (латофлекса);<br>
-                        - при трансформации не требует расстояния от спинки до стены;<br>
-                        - ровное спальное место;<br>
-                        - подушки, наполнитель Холофайбер.<br>
-                    </p>
-                </div>
+                <ul>
+                    <li>Механизм транформации - "Еврокнижка"</li>
+                    <li>Бельевой ящик</li>
+                    <li>Пружинный блок</li>
+                    <li>Наполнитель для подушек - Холофайбер</li>
+                </ul>
             </div>
+            
         </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-flex">
+                <div class="footer-flex__copy"><span>Copyright © Furniture Manufacturing Website 2019</span></div>                        
+        </footer>
+        <!-- FOOTER END-->
     </section>
+        
+
+    
     
     
      <!-- JS lightGallery -->
