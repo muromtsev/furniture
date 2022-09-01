@@ -180,7 +180,6 @@ a {
   width: 100%;
 }
 .page .page-flex .item {
-  padding-top: 50px;
   padding-bottom: 20px;
 }
 .page .page-flex .item-title__name {
@@ -201,11 +200,19 @@ a {
   border-top: 2px dashed #fff;
 }
 
+@media screen and (max-width: 860px) {
+  .page-flex {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .footer {
   max-width: 1920px;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #fff;
 }
 .footer-flex {
   display: -webkit-box;
