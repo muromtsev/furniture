@@ -1,0 +1,19 @@
+main {
+    max-width: 1920px;
+    width: 100%;
+    .main__menu-items {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        max-width: calc(260px * 3);
+        width: 100%;
+        margin: 0 auto;
+
+        .elem {
+            max-width: 250px;
+            width: 100%;
+            padding: 5px;
+            
+        }
+    }
+}
